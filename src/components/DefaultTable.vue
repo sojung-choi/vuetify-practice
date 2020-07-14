@@ -1,12 +1,6 @@
 <template>
   <v-container>
     <v-row class="text-left">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         <v-btn v-on:click="fetchData"> get data </v-btn>
         <br/>
         <v-data-table
@@ -24,7 +18,7 @@
   import axios from 'axios';
 
   export default {
-    name: 'Table',
+    name: 'DefaultTable',
 
     data () {
       return {

@@ -1,9 +1,16 @@
 <template>
+    <div>
+        <default-table></default-table>
+    </div>
 </template>
 
 <script>
+    import DefaultTable from "../components/DefaultTable";
     export default {
-        name: "Home.vue"
+        name: "Home",
+        components: {
+            DefaultTable
+        },
     }
 </script>
 

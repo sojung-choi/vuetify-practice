@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/Home.vue'
+
+import Home from "../pages/Home";
 
 
 Vue.use(VueRouter)
@@ -8,13 +9,18 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'Home',
         component: Home
     },
     {
-        path: '/about',
-        name: 'about',
-        component: () => import(/* webpackChunkName: "about" */ '../pages/About.vue')
+        path: '/csj',
+        name: 'Csj',
+        component: () => import(/* webpackChunkName: "about" */ '../pages/Csj')
+    },
+    {
+        path: '/cyj',
+        name: 'Cyj',
+        component: () => import(/* webpackChunkName: "about" */ '../pages/Cyj')
     },
     { path: '*', redirect: '/' }
 ]
