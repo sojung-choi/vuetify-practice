@@ -1,15 +1,19 @@
 <template>
     <div>
+        <default-card-list></default-card-list>
         <default-table></default-table>
     </div>
 </template>
 
 <script>
-    import DefaultTable from "../components/DefaultTable";
+    import defaultTable from "../components/container/DefaultTable";
+    import defaultCardList from "../components/container/DefaultCardList";
+
     export default {
         name: "Home",
         components: {
-            DefaultTable
+            defaultTable,
+            defaultCardList
         },
     }
 </script>

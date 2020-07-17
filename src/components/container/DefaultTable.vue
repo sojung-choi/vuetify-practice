@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import axios from 'axios';
+
 
   export default {
     name: 'DefaultTable',
@@ -38,7 +38,7 @@
     },
     methods: {
       fetchData () {
-        axios.get('https://jsonplaceholder.typicode.com/users/')
+        this.$axios.get('https://jsonplaceholder.typicode.com/users/')
                 .then((response) => {
                   console.log(response);
                   this.articles = response.data;
@@ -53,7 +53,7 @@
       initData () {
         if( this.loading) return
         this.loading =true;
-        axios.get('https://jsonplaceholder.typicode.com/users/')
+          this.$axios.get('https://jsonplaceholder.typicode.com/users/')
                 .then((response) => {
                   console.log(response);
                   this.articles = response.data;
