@@ -10,7 +10,8 @@ export default {
     },
     [Constant.DELETE_TODO]: (state, payload) => {
         if (payload.todo !== "") {
-            state.todolist.splice(payload.index, 1)
+            const num =  state.todolist.findIndex(obj => obj.id === payload);
+            state.todolist.splice(num, 1)
         }
     }
 }

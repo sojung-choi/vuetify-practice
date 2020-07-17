@@ -6,7 +6,7 @@
                         :key="card.id"
                         :cols="card.flex"
                 >
-                <card :data="card" @remove="deleteTodo"></card>
+                <card :data="card" @remove="del"></card>
             </v-col>
         </v-row>
     </v-container>
@@ -23,6 +23,9 @@
         },
         computed: mapState(['todolist']),
         methods: {
+            del(id){
+                this.$store.dispatch('removeItem',id)
+            },
             ...mapMutations([
                 constant.DELETE_TODO,
             ])

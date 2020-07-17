@@ -8,28 +8,13 @@
         >
             <v-card-title>{{item.title}}</v-card-title>
         </v-img>
-
         <v-card-subtitle class="pb-0">{{item.subTitle}}</v-card-subtitle>
-
         <v-card-text class="text--primary">
             <div>{{item.desc}}</div>
         </v-card-text>
-
         <v-card-actions>
-            <v-btn
-                    color="orange"
-                    text
-            >
-                공유
-            </v-btn>
-
-            <v-btn
-                    color="orange"
-                    text
-                    @click.stop="remove"
-            >
-                삭제
-            </v-btn>
+            <v-btn color="orange" text>공유</v-btn>
+            <v-btn color="orange" text @click.stop="remove">삭제</v-btn>
         </v-card-actions>
     </v-card>
 </template>
