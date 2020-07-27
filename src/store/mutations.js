@@ -13,5 +13,8 @@ export default {
             const num =  state.todolist.findIndex(obj => obj.id === payload);
             state.todolist.splice(num, 1)
         }
-    }
+    },
+    thumbup: state => state.count++,
+    thumbdown: state => {if(state.count>0) state.count--}
+
 }

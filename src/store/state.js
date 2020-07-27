@@ -11,5 +11,6 @@ export default {
         { id: 6,title: "VUEX 사용",subTitle:'VUEX', desc: '전역 변수 사용 방법', done: true },
         { id: 7,title: "ES6 학습", subTitle:'ES6문법', desc: 'ES6 문법 공부', done: false },
         { id: 8,title: "VUE 생명 주기 공부", subTitle:'VUE기초학습', desc: '생명 주기 공부', done: false },
-    ]
+    ],
+    count: 0
 }
