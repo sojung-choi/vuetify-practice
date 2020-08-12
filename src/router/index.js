@@ -15,7 +15,34 @@ const routes = [
     {
         path: '/csj',
         name: 'Csj',
-        component: () => import(/* webpackChunkName: "about" */ '../pages/Csj')
+        component: () => import(/* webpackChunkName: "about" */ '../pages/Csj'),
+        children: [ 
+            {
+                path: '/csj/table',
+                name: 'table',
+                component: () => import(/* webpackChunkName: "about" */ '../components/container/DefaultTable')
+            },
+            {
+                path: '/csj/list',
+                name: 'List',
+                component: () => import(/* webpackChunkName: "about" */ '../components/container/DefaultList')
+            },
+            {
+                path: '/csj/photo',
+                name: 'Photo',
+                component: () => import(/* webpackChunkName: "about" */ '../components/container/DefaultImageGrid')
+            },
+            {
+                path: '/csj/btable',
+                name: 'Btable',
+                component: () => import(/* webpackChunkName: "about" */ '../components/container/DefaultBuefyTable')
+            },
+            {
+                path: '/csj/like',
+                name: 'Like',
+                component: () => import(/* webpackChunkName: "about" */ '../components/presentational/Like')
+            }
+        ]
     },
     {
         path: '/cyj',

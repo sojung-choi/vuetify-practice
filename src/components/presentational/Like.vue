@@ -1,7 +1,7 @@
 <template>
      <v-container center>
      <div>
-        like {{count}} count*count {{multiply}}
+        like {{count}} {{multiply}}
 
       <v-btn class="ma-2" text icon color="blue lighten-2" @click="thumbup">
         <v-icon>mdi-thumb-up</v-icon>

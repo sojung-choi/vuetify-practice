@@ -1,52 +1,45 @@
 <template>
       <v-card>
     <v-tabs 
-        vertical 
-        height="785"
-        background-color="#FAFAFA"     
+        background-color="#FAFAFA"   
+        fixed-tabs  
     >
-      <v-tab>
+      <v-tab to="/csj/list">
         list
       </v-tab>
-      <v-tab>
+      <v-tab to="/csj/photo">
         photo
       </v-tab>
-      <v-tab>
+      <v-tab to="/csj/like">
         like
       </v-tab>
+      <v-tab to="/csj/btable">
+        table
+      </v-tab>
+       <v-tab to="/csj/table">
+        Dtable
+      </v-tab>
 
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text>
-            <default-list></default-list>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text>
-            <default-imagegrid></default-imagegrid>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-          <like></like>
-      </v-tab-item>
     </v-tabs>
+    <router-view></router-view>
   </v-card>
 </template>
 
 <script>
-    import defaultList from "../components/container/DefaultList";
-    import defaultImageGrid from "../components/container/DefaultImageGrid";
-    import like from "../components/presentational/Like";
+    //import defaultList from "../components/container/DefaultList";
+    //import defaultImageGrid from "../components/container/DefaultImageGrid";
+    //import like from "../components/presentational/Like";
+    //import defaultBuefyTable from "../components/container/DefaultBuefyTable";
+    //import defaultTable from "../components/container/DefaultTable";
 
     export default {
         name: "Csj",
         components: {
-            defaultList,
-            'default-imagegrid': defaultImageGrid,
-            like
+          //  defaultList,
+          //  'default-imagegrid': defaultImageGrid,
+          //  like,
+          //  'default-b-table': defaultBuefyTable,
+          //  'default-table': defaultTable
         }
     }
 </script>

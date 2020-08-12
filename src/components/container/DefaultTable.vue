@@ -23,16 +23,7 @@
     data () {
       return {
           articles: [],
-          headers: [
-              { text: 'address', value: 'address.street', sortable: true, class: 'hidden-sm-and-down' },
-              { text: 'company', value: 'company.name', sortable: true },
-              { text: 'email', value: 'email', sortable: false },
-              { text: 'id', value: 'id', sortable: true },
-              { text: 'name', value: 'name', sortable: true },
-              { text: 'phone', value: 'phone', sortable: true },
-              { text: 'username', value: 'username', sortable: true },
-              { text: 'website', value: 'website', sortable: true },
-          ],
+          headers: [],
           loading: false
       };
     },
@@ -50,6 +41,18 @@
       cleanData () {
         this.articles = [];
       },
+      initHeader () {
+          this.$axios.get('http://localhost:8989/api/getMethod')
+                .then((response) => {
+                  console.log(response);
+                  this.headers = response.data;
+                  this.loading = false
+                })
+                .catch((error) => {
+                  this.loading = false
+                  console.log(error);
+                });
+      },
       initData () {
         if( this.loading) return
         this.loading =true;
@@ -66,7 +69,9 @@
       },
     },
     mounted() {
+      this.initHeader()  
       this.initData()
+      
     }
   }
 </script>
